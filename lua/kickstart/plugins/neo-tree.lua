@@ -35,4 +35,9 @@ return {
       },
     },
   },
+  config = function (_, opts)
+    vim.api.nvim_set_hl(0, "NeoTreeDirectoryName", { fg = "#abb2bf", bg = nil })
+
+    require('neo-tree').setup(opts)
+  end
 }
