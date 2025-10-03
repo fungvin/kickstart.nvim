@@ -33,6 +33,13 @@ return {
         enabled = true, -- This will find and focus the file in the active buffer every time the current file is changed while the tree is open.
         leave_dirs_open = false, -- `false` closes auto expanded dirs, such as with `:Neotree reveal`
       },
+      find_command = 'fd',
+      find_args = {
+        fd = {
+          '--exclude',
+          'node_modules',
+        },
+      },
     },
   },
   config = function(_, opts)
